@@ -11,6 +11,8 @@ mongoose.connect(DBAuth,{
 useUnifiedTopology: true 
 }).then((con)=>{
     console.log("DB connection successful");
+}).catch((error)=>{
+  console.log(error);
 })
 
 process.on('unhandledRejection',err=>{
